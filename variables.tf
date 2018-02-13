@@ -16,6 +16,12 @@ variable "ami_name" {
   type        = "string"
 }
 
+variable "ami_owner" {
+  description = "The owner of the ami you want to use. (`self` or account id)"
+  default     = "self"
+  type        = "string"
+}
+
 variable "ami_prefix" {
   description = "The prefix of the AMI to use for the instance(s)."
   default     = ""
