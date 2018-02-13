@@ -16,7 +16,6 @@
 
 data "aws_ami" "zookeeper" {
   most_recent = true
-  name_regex  = "^${var.prefix}${var.name}-.*-(\\d{14})$"
   owners      = ["${var.ami_owner}"]
   filter {
     name   = "architecture"
