@@ -23,7 +23,7 @@ data "aws_ami" "zookeeper" {
   }
   filter {
     name   = "name"
-    values = ["${var.ami_prefix}${var.ami_name}-*"]
+    values = ["Zookeeper-image"]
   }
   filter {
     name   = "virtualization-type"
