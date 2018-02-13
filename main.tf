@@ -126,7 +126,7 @@ resource "aws_launch_configuration" "zookeeper" {
 
 data "template_file" "zookeeper_asg" {
   count    = "${var.use_asg ? 1 : 0}"
-  template = "${file("${path.module}/templates/cloud-config/init_asg.tpl")}"
+  template = "${file("./templates/cloud-config/init_asg.tpl")}"
   vars {
     domain         = "${var.domain}"
     eni_reference  = "${var.prefix}${var.name}"
