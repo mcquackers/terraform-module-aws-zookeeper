@@ -136,6 +136,10 @@ data "template_file" "zookeeper_asg" {
   }
 }
 
+output "path" {
+  value = "${path.module}/templates/cloud-config/init_asg.tpl"
+}
+
 data "template_file" "zookeeper_asg_addr" {
   count    = "${var.use_asg ? var.number_of_instances : 0}"
   template = "$${index}:$${address}"
